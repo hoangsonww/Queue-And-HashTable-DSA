@@ -54,7 +54,7 @@ Contributions are welcome. Please adhere to conventional coding standards and pr
 
 ## Testing
 
-Utilize the provided `Tester.java` for JUnit testing, ensuring that new contributions do not break existing functionalities.
+Utilize the provided `MainTester.java` and `Tester.java` for JUnit testing, ensuring that new contributions do not break existing functionalities.
 
 ## License
 
