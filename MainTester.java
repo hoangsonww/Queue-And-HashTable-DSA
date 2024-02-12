@@ -24,7 +24,7 @@ import static org.junit.Assert.assertThrows;
  * @since 04/02/2023
  * @version 1.0
  */
-public class HW4Tester {
+public class MainTester {
 
     // TESTING THE CONSTRUCTORS AND METHODS OF THE TOKENIZER CLASS:
 
