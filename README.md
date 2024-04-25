@@ -56,6 +56,12 @@ Contributions are welcome. Please adhere to conventional coding standards and pr
 
 Utilize the provided `MainTester.java` and `Tester.java` for JUnit testing, ensuring that new contributions do not break existing functionalities.
 
+You can run them as follows:
+```bash
+java MainTester
+java Tester
+```
+
 ## License
 
 This project is open-source, available for modification and distribution under standard open-source licenses.
