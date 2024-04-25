@@ -63,3 +63,7 @@ This project is open-source, available for modification and distribution under s
 ## Contact
 
 For bug reports, feature requests, or contributions, please open an issue or pull request on the project's repository.
+
+---
+
+Created with ❤️ in 2023 by [Son Nguyen](https://github.com/hoangsonww). All rights reserved.
