@@ -62,7 +62,7 @@ java MainTester
 java Tester
 ```
 
-They will use sample testing files and data, such as `TestTextFile.txt` or `TestTextFile1.txt`, etc. to test all functions and methods of the programs.
+They will use sample testing files and data, such as `TestTextFile.txt` or `TestTextFile1.txt`, etc. to test all functions and methods of the Java classes and programs.
 
 ## License
 
