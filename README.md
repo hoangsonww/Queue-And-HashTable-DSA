@@ -62,6 +62,8 @@ java MainTester
 java Tester
 ```
 
+They will use sample testing files and data, such as `TestTextFile.txt` or `TestTextFile1.txt`, etc. to test all functions and methods of the programs.
+
 ## License
 
 This project is open-source, available for modification and distribution under standard open-source licenses.
