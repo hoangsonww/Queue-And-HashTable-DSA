@@ -21,7 +21,6 @@ public class PriorityQueue<K extends Comparable<? super K>,V> {
     /**
      * A constructor that creates this instance of Priority Queue that takes no parameters.
      * Time Complexity: O(1)
-     *
      */
     public PriorityQueue() {
         this.priorityHeap = new ArrayList<QueueNode<K, V>>();
