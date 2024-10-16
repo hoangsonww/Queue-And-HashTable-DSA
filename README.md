@@ -74,4 +74,4 @@ For bug reports, feature requests, or contributions, please open an issue or pul
 
 ---
 
-Created with ❤️ in 2023 by [Son Nguyen](https://github.com/hoangsonww). All rights reserved.
+Created with ❤️ in 2023 by [Son Nguyen](https://github.com/hoangsonww).
