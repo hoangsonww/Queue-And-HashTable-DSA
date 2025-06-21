@@ -44,24 +44,28 @@ public class MainTester {
     @Before
     public void setUp() throws IOException {
         testArray = new String[] {
-                "I'm going to eat twenty-five pancakes.",
-                "I've got 2 cats and 1 dog!",
-                "This sentence has %^& special characters.",
-                "This_isn't_separated_by_spaces.",
-                " :) "
+            "I'm going to eat twenty-five pancakes.",
+            "I've got 2 cats and 1 dog!",
+            "This sentence has %^& special characters.",
+            "This_isn't_separated_by_spaces.",
+            " :) "
         };
+    
         testFile = File.createTempFile("testfile", ".txt");
-        FileWriter fileWriter = new FileWriter(testFile);
-        for (String line : testArray) {
-            fileWriter.write(line);
-            fileWriter.write("\n");
+    
+        // try-with-resources ensures the writer is closed automatically
+        try (BufferedWriter writer = new BufferedWriter(new FileWriter(testFile))) {
+            for (String line : testArray) {
+                writer.write(line);
+                writer.newLine();
+            }
         }
-        fileWriter.close();
-        expectedOutput = new ArrayList<String>(Arrays.asList(
-                "im", "going", "to", "eat", "twentyfive", "pancakes",
-                "ive", "got", "2", "cats", "and", "1", "dog",
-                "this", "sentence", "has", "special", "characters",
-                "thisisntseparatedbyspaces"
+    
+        expectedOutput = new ArrayList<>(Arrays.asList(
+            "im", "going", "to", "eat", "twentyfive", "pancakes",
+            "ive", "got", "2", "cats", "and", "1", "dog",
+            "this", "sentence", "has", "special", "characters",
+            "thisisntseparatedbyspaces"
         ));
     }
 
