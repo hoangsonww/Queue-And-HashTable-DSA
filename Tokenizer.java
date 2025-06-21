@@ -26,13 +26,11 @@ public class Tokenizer {
     public Tokenizer(String file) {
         // Creates a new instance of ArrayList to store the normalized word list
         this.normalizedWordList = new ArrayList<String>();
-        /* To make sure that we do not leave any exception unchecked (as reading a file may cause an IOException) a try-catch
-         * block is implemented: */
-        try {
-            // Creates a new instance of ArrayList to store the normalized word list
+    
+        // Use try-with-resources to ensure the BufferedReader is closed
+        try (BufferedReader bufferedReader = new BufferedReader(new FileReader(file))) {
+            // (Keeps the same double-instantiation logic as before)
             this.normalizedWordList = new ArrayList<String>();
-            // Creates a new BufferedReader instance & FileReader instance to read the .txt file
-            BufferedReader bufferedReader = new BufferedReader(new FileReader(file));
             // Variable that keeps track of every line in the file
             String individualLine = new String();
             // A loop that reads every line or individual word from the given file and converts them into normalized words
@@ -49,7 +47,7 @@ public class Tokenizer {
                     boolean checkStringEmpty = normalizedWord.length() == 0;
                     // If it's empty, do NOT add it to the normalized words list
                     if (checkStringEmpty == true) {
-                        ;
+                        // no-op
                     }
                     // Otherwise, add it to the normalized word list
                     else {
@@ -57,10 +55,9 @@ public class Tokenizer {
                     }
                 }
             }
-            bufferedReader.close();
         }
-        /* If any IOException is caught during the execution of the above steps, print the message of the exception and
-         * its cause. Additionally, terminate the above process. */
+        /* If any IOException is caught during the execution of the above steps,
+           print the message of the exception and its cause. Additionally, terminate the above process. */
         catch (IOException exception) {
             System.out.println(exception.getMessage());
             System.out.println(exception.getCause());
