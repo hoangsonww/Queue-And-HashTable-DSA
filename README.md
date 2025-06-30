@@ -1,4 +1,4 @@
-# WordStat and CMDb Applications of `PriorityQueues` and `HashTables`
+# WordStat and CMDb Applications of `PriorityQueues` and `HashTables` in Java OOP
 
 ## Overview
 
